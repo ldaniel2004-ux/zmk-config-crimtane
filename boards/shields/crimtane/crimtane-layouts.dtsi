@@ -1,23 +1,24 @@
-// See https://zmk.dev/docs/development/hardware-integration/physical-layouts
-// for how to configure this.
-
 #include <physical_layouts.dtsi>
 
 / {
-    default_layout: default_layout {
+    // =========================================================================
+    // 1. MAIN SPLIT KEYBOARD LAYOUT
+    // =========================================================================
+    crimtane_layout: crimtane_layout {
         compatible = "zmk,physical-layout";
-        display-name = "Default Layout";
-        transform = <&default_transform>;
-        kscan = <&kscan>;
-
-        // Edit this to define the positions and sizes of the keys, or remove it
-        // if your keyboard will not support ZMK Studio.
-        // https://zmk.dev/docs/development/hardware-integration/physical-layouts#optional-keys-property
-        keys  //                     w   h    x    y     rot    rx    ry
-            = <&key_physical_attrs 100 100    0    0       0     0     0>
-            , <&key_physical_attrs 100 100  100    0       0     0     0>
-            , <&key_physical_attrs 100 100    0  100       0     0     0>
-            , <&key_physical_attrs 100 100  100  100       0     0     0>
-            ;
+        display-name = "Crimtane Split Keyboard";
+	transform = <&default_transform>;
     };
+
+};
+
+/ {
+    // Satisfies the numpad build before crimtane.dtsi loads
+    default_transform: default_transform {
+        compatible = "zmk,matrix-transform";
+        columns = <0>;
+        rows = <0>;
+        map = <>;
+    };
+
 };

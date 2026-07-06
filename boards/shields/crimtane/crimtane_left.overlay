@@ -1,5 +1,12 @@
 #include "crimtane.dtsi"
 
+/ {
+    chosen {
+        zmk,kscan = &kscan;
+        zmk,physical-layout = &crimtane_layout;
+    };
+};
+
 &kscan {
     col-gpios
         = <&pro_micro 5 GPIO_ACTIVE_HIGH>

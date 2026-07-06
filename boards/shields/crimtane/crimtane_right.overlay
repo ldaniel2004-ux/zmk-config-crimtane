@@ -4,6 +4,13 @@
     col-offset = <7>;
 };
 
+/ {
+    chosen {
+        zmk,kscan = &kscan;
+        zmk,physical-layout = &crimtane_layout; // explicitly locks right side to split map
+    };
+};
+
 &kscan {
     col-gpios
         = <&pro_micro 3 GPIO_ACTIVE_HIGH>
