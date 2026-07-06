@@ -1,6 +1,15 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
+/ {
+    behaviors {
+        soft_off: soft_off {
+            compatible = "zmk,behavior-soft-off";
+            #binding-cells = <0>;
+        };
+    };
+};
+
 // ============================================================================================================
 //                                         CRIMTANE KEYMAP REFERENCE GRID
 // ============================================================================================================
