@@ -11,14 +11,3 @@
     };
 
 };
-
-/ {
-    // Satisfies the numpad build before crimtane.dtsi loads
-    default_transform: default_transform {
-        compatible = "zmk,matrix-transform";
-        columns = <0>;
-        rows = <0>;
-        map = <>;
-    };
-
-};
