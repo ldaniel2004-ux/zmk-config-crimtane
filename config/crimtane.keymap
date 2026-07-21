@@ -2,11 +2,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-/ {
-    behaviors {
-
-};
-
 // ============================================================================================================
 //                                         CRIMTANE KEYMAP REFERENCE GRID
 // ============================================================================================================
@@ -26,7 +21,7 @@
 // | SHFT|  Z  |  X  |  C  |  V  |  B  |                 |  N  |  M  |  ,  |  .  |  /  | SHFT|
 // | CTRL| WIND| ALT | DISC| MUTE|     |SPACE|     |SPACE|     |  MO | ALT | WIND|  \  | CTRL|
 
-{
+/ {
 
    macros {
         // Defines a macro that presses LCTRL + LSHIFT + LALT + M all at once
